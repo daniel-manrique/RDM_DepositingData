@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/1208161/02a7bc3ab969447599efc9baa34110f1
+bundleId: https://api.rpubs.com/api/v1/document/1208161/02a7bc3ab969447599efc9baa34110f1
+url: http://rpubs.com/daniel-manrique/1208161
+version: 1

@@ -1,5 +1,5 @@
 ---
-title: "Depositing Data into FRDR"
+title: "Depositing research data"
 author: 
   - name: Daniel Manrique-Castano, Ph.D
     email: daniel.manrique-castano@alliancecan.ca
@@ -8,6 +8,9 @@ author:
 format: 
   html:
     embed-resources: true
+    mermaid:
+      theme: forest
+      
   revealjs:
     footer: "Depositing Data into FRDR - Daniel Manrique-Castano, Ph.D"
     logo: alliance_logo.png
@@ -16,93 +19,214 @@ format:
     slide-number: true
     show-slide-number: all
     preview-links: auto
+    mermaid:
+      theme: forest
+      mermaid-format: svg
+    
+filters:
+  - reveal-auto-agenda
+auto-agenda:
+  bullets: numbered
+  heading: Agenda
+  
+  gfm:
+    mermaid-format: svg
 
 css: styles.css
 
 bibliography: references.bib 
 ---
 
-## Ensuring the data is a valuable, standalone resource {style="text-align: center;"}
+# Principles of dataset deposits
 
--   A brief introduction to FRDR.
--   The significance of submitting well-structured data.
--   Key steps and best practices for depositing data into FRDR.
+## Ensure your data is a valuable, standalone resource
+
+-   {{< bi archive-fill >}} Your dataset should be a [standalone resource]{style="color:green;"}.
+-   {{< bi binoculars-fill >}} Your dataset should be [discoverable]{style="color:green;"} and [understandable]{style="color:green;"}.
+-   {{< bi person-fill >}} Your dataset must be [reusable]{style="color:green;"} by the community.
+
+::: {.callout-caution collapse="true"}
+## Standalone object
+
+Regardless of whether the dataset is linked to a scientific publication, it must be [understandable]{style="color:blue;"} and [independently navigable.]{style="color:blue;"}
+:::
+
+## Common issues in data repositories
+
+-   {{< bi file-earmark-text-fill >}} Lack of comprehensive [metadata and readme file(s)]{style="color:red;"} that explain the [context, methodology, and structure of the dataset]{style="text-decoration: underline;"}.
+
+-   {{< bi file-earmark-break-fill >}} [Disorganized/unstructured]{style="color:red;"} data that makes it impossible to reuse.
+
+-   {{< bi file-earmark-medical-fill >}} The dataset is treated only as a [supplement]{style="color:red;"} of research articles.
+
+::: {.callout-caution collapse="true"}
+## Please avoid
+
+"Details about the methods to generate the data can be found in [XXXX]{style="color:red;"}"
+:::
+
+## Sharing data is a professional responsability {.center}
+
+The deposition of a dataset in a repository is not only an exercise to comply with the requirements of funding agencies and journals. It is a an [ethical and professional responsibility]{style="color:green;"} of researchers to ensure reproducible science, and the access and reuse of scientific data.
+
+
+## Benefits for different stakeholders
+
+### For researchers:
+
+```{mermaid}
+%%| fig-width: 10
+%%| fig-height: 9
+
+flowchart LR
+  A[Efficiency] --> B[Collaborative work] --> C[Reproducibility/impact]
+```
+
+### For publishers:
+
+```{mermaid}
+%%| fig-width: 10
+%%| fig-height: 9
+
+flowchart LR
+  A[Rigorous peer review] --> B[Validation and reproducibility] --> C[?????]
+```
+
+### For funders:
+
+```{mermaid}
+%%| fig-width: 10
+%%| fig-height: 9
+
+flowchart LR
+  A[Transparency] --> B[Accountability] --> C[Return on Investment]
+```
+
+
+# The Federated Research Data Repository (FRDR)
 
 ## Understanding FRDR
 
 ::: r-fit-text
-**Definition**:
+The Federated Research Data Repository (FRDR) is a national platform for Canadian researchers to discover, store, and share research data.
 
-The Federated Research Data Repository (FRDR) is a national platform for Canadian researchers to store, share, and discover research data.
+**Our goals**:
 
-**Goals**:
+-   {{< bi bookmark-check-fill >}} Enhance dataset [discoverability]{style="color:green;"} (in partnership with [Lunaris](https://www.lunaris.ca/)).
+-   {{< bi bookmark-check-fill >}} Promote [open science practices]{style="color:green;"} and the [reuse]{style="color:green;"} of research data.
+-   {{< bi bookmark-check-fill >}} Ensure [long-term preservation]{style="color:green;"} of valuable research data.
+:::
 
--   Enhance data discoverability.
--   Promote open data practices.
--   Ensure long-term preservation of research data.
+::: callout-tip
+## FRDR is for canadian researchers
 
-FRDR supports a wide range of disciplines and data types and provides a robust infrastructure for managing and disseminating research data across Canada.
+FRDR supports a wide range of disciplines and data types, providing a robust infrastructure for managing and disseminating research data across Canada.
 :::
 
 ## Benefits of using FRDR
 
 ::: r-fit-text
-**Long-term preservation**:
+-   {{< bi bookmark-plus-fill >}} FRDR ensures [long-term preservation]{style="color:green;"}, [accessibility]{style="color:green;"} and [usability]{style="color:green;"} of datasets through its curation and preservation team.
 
--   FRDR ensures long-term preservation, accessibility and usability.
+-   {{< bi bookmark-plus-fill >}} FRDR supports requirements from Funding [agencies](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions) associated with open access to data (and [research data management plans](https://dmp-pgd.ca/)).
 
-**Compliance with funding requirements**:
+-   {{< bi bookmark-plus-fill >}} Promotes [dataset visibility]{style="color:green;"} and [reuse]{style="color:green;"} across a wide range of discplines.
 
--   Funding [agencies](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions) require data management plans and (soon) open access to data. FRDR helps you comply with these requirements.
+-   {{< bi bookmark-plus-fill >}} FRDR supports [large datasets]{style="color:green;"}, making it an ideal repository for data-intensive research.
 
-**Increased visibility and citation**:
-
--   Sharing your data increases its visibility and contributes to reproducible science.
-
-**Support for large datasets**:
-
--   FRDR supports large/heavy datasets, making it an ideal repository for data-intensive research.
+-   {{< bi bookmark-plus-fill >}} FRDR supports researchers in best [data management practices]{style="color:green;"}.
 :::
 
-## Common issues in data repositories
+::: callout-tip
+## FRDR supports researchers and institutions
+
+FRDR has competent staff to accompany researchers and institutions, ensuring that datasets are valuable and comply with [FAIR](https://www.go-fair.org/fair-principles/) principles.
+:::
+
+# General guidelines for dataset deposits
+
+## Datasets as standalone, reusable objects
+
+At FRDR, we aim that datasets are [standalone objects]{style="color:green;"} (independent of research articles) with potential [social, research or educational uses]{style="text-decoration: underline;"}.
+
+::: {style="text-align: center;"}
+![Image by https://biosistemika.com/](images/FAIR_Principles.png){fig-align="center" width="500" height="250"}
+:::
+
+## Define a dataset schema/road
+
+At the [beginning]{style="color:green;"} (optimal) or [during]{style="color:blue;"} (not bad) your research, define an organized scheme for data, including:
+
+-    {{< bi file-earmark-spreadsheet-fill >}} Readme/metadata
+
+-    {{< bi folder-fill >}} Folders/directory structures
+
+-    {{< bi filetype-tiff >}} file formats
+
+-   {{< bi 123 >}} Naming conventions
+
+::: callout-tip
+Overall, ensure the schema is logical and consistent.
+:::
+
+## The guiding light of a dataset: the README
+
+The (main) [Readme]{style="color:blue;"} file is a guide to [understand the dataset]{style="color:green;"} and allow its reuse or execution.
+
+:::: {layout-ncol=2}
+
+::: {style="text-align: left;"}
+![From https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-align="center" width="500" height="300"}
+:::
+FRDR users can use our \[text\] or \[web\] template to generate a [readme file]{style="color:blue;"} for deposit into FRDR
+::::
+
+## Contents of a readme file
+
 
 ::: r-fit-text
-**Insufficient metadata / contextual information**:
+Generally, a dataset readme file showcases:
 
--   Lacking of comprehensive metadata and readme file(s) that explain the context, methodology, and structure of the dataset.
+-   {{< bi database-fill >}} A [dataset identifier]{style="color:green;"} showing aspects such as title, authors, data collection date, Geographic information.
+-   {{< bi folder-fill >}} A [map of files/folders]{style="color:green;"} defining the hierarchy of folders and subfolders and its content. Here, the user can also define the naming conventions for files and folders.
+-   {{< bi gear-fill >}} The [methodological information]{style="color:green;"} showcasing the methods for data collection/generation, analysis, and experimental conditions. 
 
-**Lack of structured data**:
-
--   Disorganized data makes it difficult to understand and reuse the data.
-
-**Dependency on research articles**:
-
--   Some datasets require the accompanying research article for full understanding, limiting the dataset's standalone value and usability.
+::: {.callout-caution collapse="true"}
+## To refresh your memory
+The dataset is a standalone object (apart from the research article). Methods and instruments for data collection [MUST NOT]{style="color:red;"} be relegated to the research article. 
 :::
 
-## Datasets at FRDR
+-   {{< bi sd-card-fill >}} A set of [instructions and software]{style="color:green;"} for opening, handling and reproduce research pipelines.
 
-At FRDR, we aim that datasets are standalone objects (independent of research articles) that the research community can explore and reuse.
+- {{< bi credit-card-2-front-fill >}} [Sharing and access information]{style="color:green;"} detailing permissions and conditions of use. 
+:::
 
-# 1. Planning Your Data Structure
 
-## Define a dataset schema:
+## Data scheme/organization
 
-At the beginning/during your research:
+And organized scheme is the key to understand data structure.
 
--   Define an organized scheme for data: consider directory structures, file formats, and naming conventions.
+:::: r-fit-text
 
-Overall, ensure the schema is logical and consistent.
+:::{layout-ncol=2}
+![From pexels.com](images/Matryoska.jpeg)
+![File structure](images/files.png){width=75%}
+:::
+::::
 
-## Diving into a dataset schema
+## Diving into the folder tree{.center}
 
-Define an organized scheme for data: consider directory structures, file formats, and naming conventions.
+Define [directory structures, file formats, and naming conventions]{style="text-decoration: underline;"}.
 
-[TIER 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/root/) is systemic template that aims at increasing transparency and reproducibility of research data:
+:::: {layout-ncol=2}
+For example, [TIER 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/root/) is [systemic template]{style="color:green;"} to standardize and increasing transparency/reproducibility of research data. The user can [download](https://github.com/daniel-manrique/RDM_Training/blob/main/Templates/TIER4.0_DatasetTemplate.zip) a folder structure and adapt it to specific cases.
 
-You can download a folder structure [here](https://github.com/daniel-manrique/RDM_Training/blob/main/Templates/TIER4.0_DatasetTemplate.zip)
+::: {style="text-align: center;"}
+![From https://www.projecttier.org/](images/files.png){width=80%}
+:::
+::::
 
-## Points to consider when building the dataset
+## Building a comprenhensive dataset
 
 ::: r-fit-text
 **File/folder organization**:
@@ -118,20 +242,7 @@ You can download a folder structure [here](https://github.com/daniel-manrique/RD
 The preceding is crucial to enhance clarity and usability your data.
 :::
 
-## The guiding light: The README
 
-::: r-fit-text
-The (main) *Readme* file is a guide to understand the dataset. It must provide the reader sufficient information to understand its content and allow its reuse.
-
-You can use our \[text\] or \[web\] template to generate a metadata file for deposit in FRDR
-
-Generally, a dataset readme file contains:
-
--   A **dataset identifier** showing aspects such as title, authors, data collection date, Geographic information.
--   A **map of files/folders** defining the hierarchy of folders and subfolders and its content. Here, the user can also define the naming conventions for files and folders.
--   The **methodological information** showcasting the methods for data collection and analysis, and experimental conditions when relevant. *Be aware a dataset should be a stand alone object (apart from the research article)*
--   A set of **instructions and software** for opening, handling and reproduce research pipelines.
-:::
 
 # 2. Data
 
@@ -192,6 +303,8 @@ A "Scripts_Processing" folder may contain scripts/code that prepare (or transfor
 Note: At this point, some intermediary files may be generated. Consider saving them into **"Data_Intermediate/"** folder.
 
 In many cases, the Input Data Files you obtain at the beginning of your project will not be formatted and organized in such a way that you can use them for the analysis that generates the results you present in your report.
-
-Accurate naming conventions will secure the link between the input/output data and the processing script.
 :::
+
+## 
+
+You will generate several processing scripts. Logical naming conventions is the key to link the input/output data and the processing script.

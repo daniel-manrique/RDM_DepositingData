@@ -1,10 +1,14 @@
 ---
 title: "Depositing research data"
+
 author: 
   - name: Daniel Manrique-Castano, Ph.D
     email: daniel.manrique-castano@alliancecan.ca
     affiliations:
       - name: Digital Research Alliance of Canada
+
+date: full
+
 format: 
   html:
     embed-resources: true
@@ -48,7 +52,7 @@ bibliography: references.bib
 ::: {.callout-caution collapse="true"}
 ## Standalone object
 
-Regardless of whether the dataset is linked to a scientific publication, it must be [understandable]{style="color:blue;"} and [independently navigable.]{style="color:blue;"}
+Regardless of whether the dataset is linked to a scientific publication, it must be [understandable]{style="color:green;"} and [independently navigable.]{style="color:green;"}
 :::
 
 ## Common issues in data repositories
@@ -65,10 +69,9 @@ Regardless of whether the dataset is linked to a scientific publication, it must
 "Details about the methods to generate the data can be found in [XXXX]{style="color:red;"}"
 :::
 
-## Sharing data is a professional responsability {.center}
+## {{< bi share-fill >}} Sharing data is a professional responsability {.center}
 
-The deposition of a dataset in a repository is not only an exercise to comply with the requirements of funding agencies and journals. It is a an [ethical and professional responsibility]{style="color:green;"} of researchers to ensure reproducible science, and the access and reuse of scientific data.
-
+The deposition of a dataset in a repository is [NOT ONLY]{style="color:red;"} an exercise to comply with the requirements of funding agencies and journals. It is a an [ethical and professional responsibility]{style="color:green;"} of researchers to ensure reproducible science, and the access and reuse of scientific data.
 
 ## Benefits for different stakeholders
 
@@ -102,7 +105,6 @@ flowchart LR
   A[Transparency] --> B[Accountability] --> C[Return on Investment]
 ```
 
-
 # The Federated Research Data Repository (FRDR)
 
 ## Understanding FRDR
@@ -120,7 +122,7 @@ The Federated Research Data Repository (FRDR) is a national platform for Canadia
 ::: callout-tip
 ## FRDR is for canadian researchers
 
-FRDR supports a wide range of disciplines and data types, providing a robust infrastructure for managing and disseminating research data across Canada.
+FRDR supports a [wide range of disciplines]{style="color:green;"} and data types, providing a robust infrastructure for [managing and disseminating]{style="color:green;"} research data across Canada.
 :::
 
 ## Benefits of using FRDR
@@ -143,133 +145,208 @@ FRDR supports a wide range of disciplines and data types, providing a robust inf
 FRDR has competent staff to accompany researchers and institutions, ensuring that datasets are valuable and comply with [FAIR](https://www.go-fair.org/fair-principles/) principles.
 :::
 
-# General guidelines for dataset deposits
+# FAIR model
 
-## Datasets as standalone, reusable objects
+## {{< bi database-fill >}} Datasets as standalone, reusable objects
 
 At FRDR, we aim that datasets are [standalone objects]{style="color:green;"} (independent of research articles) with potential [social, research or educational uses]{style="text-decoration: underline;"}.
 
-::: {style="text-align: center;"}
+::: {style="text-align: center;font-size: 50%"}
 ![Image by https://biosistemika.com/](images/FAIR_Principles.png){fig-align="center" width="500" height="250"}
 :::
 
-## Define a dataset schema/road
+## FAIR principles {.smaller}
 
-At the [beginning]{style="color:green;"} (optimal) or [during]{style="color:blue;"} (not bad) your research, define an organized scheme for data, including:
+:::: {layout-ncol="2"}
+::: {#first-column}
+{{< bi search >}} [Findable]{style="color:green;"}
 
--    {{< bi file-earmark-spreadsheet-fill >}} Readme/metadata
+-   {{< bi person >}} Persistent identifiers\
+-   {{< bi file-earmark-pdf-fill >}} Rich metadata
+-   {{< bi database-fill >}} Indexed in a searchable resource
 
--    {{< bi folder-fill >}} Folders/directory structures
+{{< bi hdd-fill >}} [Accessible]{style="color:green;"}
 
--    {{< bi filetype-tiff >}} file formats
-
--   {{< bi 123 >}} Naming conventions
-
-::: callout-tip
-Overall, ensure the schema is logical and consistent.
+-   {{< bi file-earmark-pdf-fill >}} Open files formats\
+-   {{< bi cpu-fill >}} Software requirements
 :::
 
-## The guiding light of a dataset: the README
+::: {#second-column}
+{{< bi diagram-2-fill >}} [Interoperable]{style="color:green;"}
 
-The (main) [Readme]{style="color:blue;"} file is a guide to [understand the dataset]{style="color:green;"} and allow its reuse or execution.
+-   {{< bi globe >}} Formal, standardized, shared language
+-   {{< bi front >}} Reference to other (meta)data
 
-:::: {layout-ncol=2}
+{{< bi recycle >}} [Reusable]{style="color:green;"}
 
-::: {style="text-align: left;"}
-![From https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-align="center" width="500" height="300"}
+-   {{< bi geo-alt-fill >}} Adequate context and detailed provenance
+-   {{< bi file-earmark-font-fill >}} Accurate/descriptive attributes
+-   {{< bi receipt >}} Clear licence and usage permissions
 :::
-FRDR users can use our \[text\] or \[web\] template to generate a [readme file]{style="color:blue;"} for deposit into FRDR
 ::::
 
-## Contents of a readme file
+# General guidelines for dataset deposits
 
+## {{< bi text-center >}} General guidelines for sharing data{.center}
+
+1.  {{< bi diagram-2-fill >}} Define a dataset [schema/road]{style="color:green;"}
+2.  {{< bi file-earmark-pdf-fill >}} Write a [readme]{style="color:green;"}/metadata file
+3.  {{< bi folder-fill >}} Organize [data]{style="color:green;"} folders and scripts/[codes]{style="color:green;"} folders
+
+## 1. Define a dataset schema/road
+
+At the [beginning]{style="color:green;"} (optimal) or [during]{style="color:green;"} (not bad) your research, define an organized scheme for data.
+
+::: callout-tip
+## Think about
+
+-   {{< bi folder-fill >}} Folders/[directory structures]{style="color:green;"}
+-   {{< bi filetype-tiff >}} Think about [file types/formats]{style="color:green;"}
+-   {{< bi file-earmark-font-fill >}} Establish logical/descriptive [naming conventions]{style="color:green;"}
+:::
+
+Overall, ensure the schema is [logical and consistent]{style="color:green;"}. An external user must be able to understand the directory structure.
+
+## 2. The guiding light of a dataset: the README
+
+The (main) {{< bi file-earmark-medical-fill>}} [readme]{style="color:green;"} file is a guide to [understand the dataset]{style="color:green;"} and allow its reuse or execution.
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+
+::: {style="text-align: center; font-size: 50%"}
+![From https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="font-size: 80%;"}
+FRDR users can use our \[text\] or \[web\] template to generate a [readme file]{style="color:green;"} for deposit into FRDR. 
+
+Additional resources are:   
+  - [Creating a README file](https://blog.datadryad.org/2023/10/18/for-authors-creating-a-readme-for-rapid-data-publication/)  
+  - [Readme.so](https://readme.so/)     
+  - [Readme.ai](https://readme-ai.streamlit.app/)  
+:::
+::::
+:::::
+
+## Contents of a readme file
 
 ::: r-fit-text
 Generally, a dataset readme file showcases:
 
 -   {{< bi database-fill >}} A [dataset identifier]{style="color:green;"} showing aspects such as title, authors, data collection date, Geographic information.
 -   {{< bi folder-fill >}} A [map of files/folders]{style="color:green;"} defining the hierarchy of folders and subfolders and its content. Here, the user can also define the naming conventions for files and folders.
--   {{< bi gear-fill >}} The [methodological information]{style="color:green;"} showcasing the methods for data collection/generation, analysis, and experimental conditions. 
+-   {{< bi gear-fill >}} The [methodological information]{style="color:green;"} showcasing the methods for data collection/generation, analysis, and experimental conditions.
 
 ::: {.callout-caution collapse="true"}
 ## To refresh your memory
-The dataset is a standalone object (apart from the research article). Methods and instruments for data collection [MUST NOT]{style="color:red;"} be relegated to the research article. 
+
+The dataset is a standalone object (apart from the research article). Methods and instruments for data collection [MUST NOT]{style="color:red;"} be relegated to the research article.
 :::
 
 -   {{< bi sd-card-fill >}} A set of [instructions and software]{style="color:green;"} for opening, handling and reproduce research pipelines.
 
-- {{< bi credit-card-2-front-fill >}} [Sharing and access information]{style="color:green;"} detailing permissions and conditions of use. 
+-   {{< bi credit-card-2-front-fill >}} [Sharing and access information]{style="color:green;"} detailing permissions and conditions of use.
 :::
 
-
-## Data scheme/organization
+## 3. Organize dataset folders
 
 And [organized scheme]{style="color:green;"} is the {{< bi key-fill >}} key to understand data structure.
 
-:::: r-fit-text
-:::{layout-ncol=2}
-![From pexels.com](images/Matryoska.jpeg)
-![File structure](images/files.png){width=75%}
+::::: {layout-ncol="2"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 50%"}
+![From pexels.com](images/Matryoska.jpeg) 
 :::
 ::::
 
-## Diving into the folder tree{.center}
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![File structure](images/files.png){width="75%"}
+:::
+::::
+:::::
 
-::::: {layout-ncol=2}
+## Diving into the folder tree {.center}
+
+::::: {layout-ncol="2"}
 
 :::: {#first-column}
 
-::: {.callout-tip}
-{{< bi diagram-3-fill >}} Plan/define [directory structures, file formats, and naming conventions]{style="text-decoration: underline;"}.   
+::: callout-tip
+{{< bi diagram-3-fill >}} Plan/define [directory structures, file formats, and naming conventions]{style="text-decoration: underline;"}.
+
 :::
 For example, [TIER 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/root/) is [systemic template]{style="color:green;"} to standardize and increasing transparency/reproducibility of research data. The user can [download](https://github.com/daniel-manrique/RDM_Training/blob/main/Templates/TIER4.0_DatasetTemplate.zip) a folder structure and adapt it to specific cases.
 ::::
 
-::: {#second-column}
-![Folder tree](images/tier.png){width=40%}
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/tier.png){width="45%"}
 :::
-:::::
-
-## Organizing a data folder{.center}
-
-{{< bi folder-fill >}} The [data folder]{style="color:green;"} must be organized [logically and hierarchically]{style="color:green;"} according to the characteristics of each dataset. 
-
-## {{< bi folder-fill >}} Input data
-
-Sharing the [input/raw data]{style="color:green;"} is a research integrity and data management best practice. The {{< bi folder-fill >}} "Data_Input/" folder can contain:
-
-::::: {layout-ncol=2}
-
-:::: {#first-column}
-
-### a) Data files (stored in subfolders if necessary)
-
--   Original images (.tiff, .czi)
--   Measuring device output files (.txt, .csv)
--   Original registration datasheets (.png, .csv, .xlxs)
 
 ::::
 
-::: {#second-column}
-![Folder tree](images/data_raw.png){width=100%}
-:::
-
 :::::
+
+## {{< bi diagram-3-fill >}} Organizing a data folder{.center}
+
+The [data]{style="color:green;"} {{< bi folder-fill >}} must be organized [logically and hierarchically]{style="color:green;"} according to the characteristics of each dataset.
+
+## {{< bi folder-fill >}} Input data
+
+Sharing the [input/raw data]{style="color:green;"} is a research integrity and data management best practice. The [Data_Input/]{style="color:orange;"} {{< bi folder-fill >}} can contain:
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+### a) [Data files]{style="color:magenta;"} (stored in subfolders if necessary)
+
+-   Original [images]{style="color:green;"} (.tiff, .czi)
+-   Measuring device [output files]{style="color:green;"} (.txt, .csv)
+-   Original registration [datasheets]{style="color:green;"} (.png, .csv, .xlxs)
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/data_raw.png){width="90%"}
+:::
+::::
+:::::
+
 
 ## 
 
-**2. A metadata file/folder**
+### b) A [metadata]{style="color:magenta;"} file/folder {{< bi folder-fill >}}
 
-This **"Metadata/"** folder contains information about the listed data files to ensure understanding and usability. It may list:
+This [Metadata/]{style="color:orange;"} {{< bi folder-fill >}} contains information about the listed data files to ensure understanding and usability. It may list:
 
--   Data sources guide: It depicts how the data was generated or its provenance. This may include methodological details and technical metadata.
--   Codebooks / data dictionaries: Explain the content of files (mainly .csv tables). They can be [.txt](https://osf.io/9n3gh) or [.csv-xlxs](https://osf.io/925sh) files.
+-   [Data sources guide:]{style="color:green;"} It depicts how the data was [generated]{style="text-decoration: underline;"}. or its [provenance]{style="text-decoration: underline;"}.. This may include [methodological details]{style="text-decoration: underline;"}. and [technical metadata]{style="text-decoration: underline;"}..
+-   [Codebooks / data dictionaries:]{style="color:green;"} Explain the [content of files]{style="text-decoration: underline;"}. (mainly .csv tables). They can be [.txt](https://osf.io/9n3gh) or [.csv-xlxs](https://osf.io/925sh) files.
 
-The aim of this resources is to sustain the reuse of the data by providing A faithful and sufficient description of the variables.
+The aim of this resources is to [sustain the reuse]{style="color:green;"} of the data by providing a faithful and [sufficient description]{style="color:green;"} of the variables.
 
-## Analysis data
+## {{< bi folder-fill >}} Analysis data{.center}
 
-A **"Data_Analysis/"** folder contains (generally cleaned) files used to generate the research results. Like the input data, this files contain a codebook/data dictionary. Also, these files can be accompanied by a "Data_Appendix" files that showcase basic descriptive statistics or show data distributions.
+
+A [Data_Analysis/]{style="color:orange;"} {{< bi folder-fill >}} contains [processed files]{style="color:green;"}, those used to generate the research results.
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+Like the input data, this files contain a [codebook/data dictionary]{style="color:green;"}. Also, these files can be accompanied by a [Data_Appendix]{style="color:green;"} files that showcase basic descriptive statistics or show data distributions.
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/data_processed.png){width="90%"}
+:::
+::::
+::::: 
+
+
 
 ## Intermediate data (Optional)
 

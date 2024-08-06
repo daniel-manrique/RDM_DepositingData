@@ -1,5 +1,5 @@
 ---
-title: "Depositing research data"
+title: "Depositing research data into repositories"
 
 author: 
   - name: Daniel Manrique-Castano, Ph.D
@@ -7,7 +7,8 @@ author:
     affiliations:
       - name: Digital Research Alliance of Canada
 
-date: full
+date: last-modified
+date-format: full
 
 format: 
   html:
@@ -16,7 +17,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Depositing Data into FRDR - Daniel Manrique-Castano, Ph.D"
+    footer: "Depositing data - Daniel Manrique-Castano, Ph.D"
     logo: alliance_logo.png
     theme: white
     transition: fade
@@ -37,7 +38,6 @@ auto-agenda:
     mermaid-format: svg
 
 css: styles.css
-
 bibliography: references.bib 
 ---
 
@@ -75,7 +75,7 @@ The deposition of a dataset in a repository is [NOT ONLY]{style="color:red;"} an
 
 ## Benefits for different stakeholders
 
-### For researchers:
+### {{< bi people-fill >}} For researchers:
 
 ```{mermaid}
 %%| fig-width: 10
@@ -85,7 +85,7 @@ flowchart LR
   A[Efficiency] --> B[Collaborative work] --> C[Reproducibility/impact]
 ```
 
-### For publishers:
+### {{< bi x-diamond-fill >}}  For publishers:
 
 ```{mermaid}
 %%| fig-width: 10
@@ -95,7 +95,7 @@ flowchart LR
   A[Rigorous peer review] --> B[Validation and reproducibility] --> C[?????]
 ```
 
-### For funders:
+### {{< bi signpost >}} For funders:
 
 ```{mermaid}
 %%| fig-width: 10
@@ -269,7 +269,7 @@ And [organized scheme]{style="color:green;"} is the {{< bi key-fill >}} key to u
 ::::
 :::::
 
-## Diving into the folder tree {.center}
+## {{< bi diagram-2-fill >}} Diving into the folder tree {.center}
 
 ::::: {layout-ncol="2"}
 
@@ -277,8 +277,8 @@ And [organized scheme]{style="color:green;"} is the {{< bi key-fill >}} key to u
 
 ::: callout-tip
 {{< bi diagram-3-fill >}} Plan/define [directory structures, file formats, and naming conventions]{style="text-decoration: underline;"}.
-
 :::
+
 For example, [TIER 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/root/) is [systemic template]{style="color:green;"} to standardize and increasing transparency/reproducibility of research data. The user can [download](https://github.com/daniel-manrique/RDM_Training/blob/main/Templates/TIER4.0_DatasetTemplate.zip) a folder structure and adapt it to specific cases.
 ::::
 
@@ -330,7 +330,6 @@ The aim of this resources is to [sustain the reuse]{style="color:green;"} of the
 
 ## {{< bi folder-fill >}} Analysis data{.center}
 
-
 A [Data_Analysis/]{style="color:orange;"} {{< bi folder-fill >}} contains [processed files]{style="color:green;"}, those used to generate the research results.
 
 ::::: {layout-ncol="2"}
@@ -348,36 +347,140 @@ Like the input data, this files contain a [codebook/data dictionary]{style="colo
 
 
 
-## Intermediate data (Optional)
+## {{< bi folder-fill >}} Intermediate data (Optional){.center}
 
-A **"Data_Intermediate/"** folder may contain partially processed data, or preprocessed files that are not raw data but and do not constitute an element results were taken from. Examples of this are images masks are machine learning classifiers generated during an image processing workflow.
+A [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} may contain mid-step processed data, or pre-processed files as part of an analysis pipeline. Examples may be images 'masks' are machine learning classifiers used to further operate with images.
 
-# 3. Documentaing data transformations: Code and Scripts
 
-## 
+## {{< bi code-square >}} Scripting is the way{.smaller}
 
-Although many scientists may feel more comfortable clicking on software (GUIs), the current research landscape demands that we ensure reproducibility of research findings through the use of scripts and analysis code.
+Although most scientists may feel more comfortable using clicking software (GUIs), the current research landscape demands to ensure reproducibility of research findings through the use of scripts and (analysis) code.
 
-Coding should be considered an essential skill of a scientist, just like other research methods (surgeries, patch clamp, flow cytometry, etc).
+::: callout-tip
+{{< bi code-square >}} Coding should be considered an [essential skill]{style="color:green;"} , just like other methods such as surgeries, patch clamp, flow cytometry).
+:::
 
-## 
+![](images/theway.png){fig-align="center"}
 
-The best of all is that the main coding schemes (i.e. R and Python) are free to use and have a strong support community.
+## {{< bi folder-fill >}} Processing scripts
 
-## Processing scripts
+:::: r-fit-text
 
-::: r-fit-text
-A "Scripts_Processing" folder may contain scripts/code that prepare (or transform) the raw data (images, tables) for analysis (**Data_Analysis/** folder). Examples of workflows:
+::: {.callout-caution collapse="true"}
+The data you obtain from measurements may not be formatted and organized to analyze it and generate results.
+:::
+
+A [Scripts_Processing]{style="color:orange;"} {{< bi folder-fill >}} may contain scripts/code that prepare (or transform) the raw data (images, tables) for analysis [Data_Analysis/]{style="color:orange;"} {{< bi folder-fill >}}.   
+
+[Examples of workflows:]{style="text-decoration: underline;"}
 
 -   Dropping variables (subsetting the dataset)
 -   Generating new variables (Perform computations, calculate means, etc.)
 -   Combing different information sources (merging tables or files)
 
-Note: At this point, some intermediary files may be generated. Consider saving them into **"Data_Intermediate/"** folder.
-
-In many cases, the Input Data Files you obtain at the beginning of your project will not be formatted and organized in such a way that you can use them for the analysis that generates the results you present in your report.
+::: callout-tip
+Yo can consider saving the generated intermediary files into the [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}}.
 :::
 
-## 
+::::
 
-You will generate several processing scripts. Logical naming conventions is the key to link the input/output data and the processing script.
+## {{< bi lightbulb-fill >}} Keep in mind{.center}
+
+You will generate several processing scripts. [Logical naming conventions]{style="color:green;"} are the key to link the input/output data with the processing scripts.
+
+## {{< bi folder-fill >}} Analysis scripts{.smaller}
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+The [Scripts_Analisys]{style="color:orange;"} {{< bi folder-fill >}} host scripts/code to generate results that may be in the form of:   
+
+-   {{< bi card-image >}} Images
+-   {{< bi file-bar-graph-fill >}} Figures
+-   {{< bi table >}} Tables
+-   {{< bi calculator-fill >}} Statistical models
+
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/scripts_processing.png){width="90%"}
+:::
+::::
+
+:::::
+
+::: callout-tip
+Generally speaking, this scripts import and handle the [Analysis data]{style="color:orange;"}.
+:::
+
+## {{< bi code-slash >}} A master script?{.center}
+
+The [Scripts/]{style="color:orange;"} {{< bi folder-fill >}} can also contain a [master script]{style="color:green;"} that executes all other scripts, forming a fully automated pipeline.
+
+## {{< bi folder-fill >}} The output folder
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+The [Output/]{style="color:orange;"} {{< bi folder-fill >}} contains subfolders storing the files generated by the analysis scripts in the form of:
+
+-   {{< bi card-image >}} Images
+-   {{< bi file-bar-graph-fill >}} Figures
+-   {{< bi table >}} Tables
+-   {{< bi calculator-fill >}} Statistical models
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/output.png){width="100%"}
+:::
+::::
+
+:::::
+
+## {{< bi lightbulb-fill >}} Commitment with reproducibility{.center}
+
+Sharing the output resulting from computations/code is one of the best better commitments to [open and reproducible science]{style="color:green;"}. It is also a way to preserve material for later use in an organized manner. 
+
+
+# Data submission checklist
+
+
+## {{< bi card-checklist >}} Submitting your data to a repository{.smaller}
+
+When submitting your data to a repository (FRDR), ensure its meets these characteristics:
+
+1. {{< bi diagram-2-fill >}} [Your folders and files are organized in a clear and structured way]{style="color:green;"} (understandable for the community): Use [standardized file formats]{style="color:green;"} (e.g., CSV, TIFF) and check for consistency in [naming conventions]{style="color:green;"}.
+
+2. {{< bi file-earmark-text-fill >}} [The metadata/readme is as complete as possible]{style="color:green;"} and allow to understand the dataset as standalone object, providing data [collection methods, processing steps, and relevant context]{style="text-decoration: underline;"}.
+
+3. {{< bi file-person-fill >}} [Verify independent usability]{style="color:green;"}: data must be [complete and understandable]{style="text-decoration: underline;"} (Include any necessary instructions for data interpretation) without needing the accompanying research article.
+
+
+## In summary{.center}
+Be aware that the datatset is a research object to [serve the public and the scientific community]{style="color:green;"}, and that can be used (and cited) [independently]{style="color:green;"} of the research article. 
+
+[Better yet, Think about articles as supplements to your dataset!!!]{style="color:green;"}
+
+---
+
+## Resources and support{.smaller}
+
+### Supporting material
+- XXX
+- XXX
+
+### Support Services:
+- Contact our team for assistance with data preparation and submission.
+- Email: daniel.manrique-castano@alliancecan.ca
+
+## Useful Links:
+- XXX
+- XXX 
+
+We are here to help you ensure your data is well-prepared and can be effectively shared with the research community.
+
+
+
+
